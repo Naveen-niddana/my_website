@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block wishlist %}
+<h1>YOUR WISHLIST❤</h1>
+<div class="row">
+    {% for product in products %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ product.image_url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Details : ......</li>
+                <li class="list-group-item">Rating : ⭐⭐⭐⭐⭐</li>
+                <li class="list-group-item">Reviews : NO Reviews yet</li>
+            </ul>
+            <div class="card-body">
+                <a href="http://127.0.0.1:8000/products" class="btn btn-primary">Back to Products</a>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

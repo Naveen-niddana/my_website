@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block offercontent %}
+<h1>Offers Available</h1>
+<div class="row">
+    {% for offer in offers %}
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ offer.code }}</h5>
+                    <p class="card-text">{{ offer.description }}</p>
+                    <a href="#" class="btn btn-primary">{{ offer.discount }}% off</a>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

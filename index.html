@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Products Available</h1>
+
+<div class="row">
+    {% for product in products %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ product.image_url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Rs: {{ product.price }}/-</p>
+                <a href="#" class="btn btn-primary"> Add to Cart </a>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0RAwY2UZVk3RFBmh2KjAoAfQGbzFW5azfkiIZmq-mmQeYN0hw&usqp=CAU"
+                     width="50" height="50"
+                     class="d-inline-block align-top" alt="">
+                <img src="https://thumbs.dreamstime.com/b/bookmark-icon-vector-isolated-white-background-your-web-mobile-app-design-bookmark-logo-concept-bookmark-icon-vector-134161428.jpg"
+                     width="50" height="50"
+                     class="d-inline-block align-top" aria-pressed="false" alt="nothing">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+
+
